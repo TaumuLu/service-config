@@ -3,5 +3,5 @@
 ## instal zsh
 
 ```
-curl -s https://example.com/script.sh | bash
+curl -s https://raw.githubusercontent.com/TaumuLu/service-config/refs/heads/master/zsh/install.sh | bash
 ```
