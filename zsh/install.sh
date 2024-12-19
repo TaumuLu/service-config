@@ -12,7 +12,5 @@ echo "-------------"
 curl -s https://raw.githubusercontent.com/TaumuLu/service-config/refs/heads/master/zsh/.zshrc -o ~/.zshrc
 
 
-echo "source ~/.zshrc"
 # 修改配置后执行
-source ~/.zshrc
-
+echo "source ~/.zshrc"
