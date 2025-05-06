@@ -1,5 +1,7 @@
+#!/bin/bash
+
 # yum install -y zsh
-sudo apt-get install zsh   # Debian系列，Ubuntu
+sudo apt-get install zsh # Debian系列，Ubuntu
 
 chsh -s $(which zsh)
 
