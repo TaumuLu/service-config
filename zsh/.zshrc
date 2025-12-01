@@ -10,19 +10,6 @@ plugins=(
   zsh-syntax-highlighting
 )
 
-PROMPT="
-%{$terminfo[bold]$fg[blue]%}#%{$reset_color%} \
-%(#,%{$bg[yellow]%}%{$fg[black]%}%n%{$reset_color%},%{$fg[cyan]%}%n) \
-%{$fg[white]%}@ \
-%{$fg[green]%}%M \
-%{$fg[white]%}in \
-%{$terminfo[bold]$fg[yellow]%}%~%{$reset_color%}\
-${hg_info}\
-${git_info}\
- \
-%{$fg[white]%}[%*] $exit_code
-%{$terminfo[bold]$fg[red]%}$ %{$reset_color%}"
-
 setopt BANG_HIST              # Treat the '!' character specially during expansion.
 setopt HIST_EXPIRE_DUPS_FIRST # Expire duplicate entries first when trimming history.
 setopt HIST_IGNORE_DUPS       # Don't record an entry that was just recorded again.
@@ -46,6 +33,19 @@ if [ ! -d $highlighting ]; then
 fi
 
 source $ZSH/oh-my-zsh.sh
+
+PROMPT="
+%{$terminfo[bold]$fg[blue]%}#%{$reset_color%} \
+%(#,%{$bg[yellow]%}%{$fg[black]%}%n%{$reset_color%},%{$bg[cyan]%}%{$fg[white]%}%n%{$reset_color%}) \
+%{$fg[white]%}@ \
+%{$fg[green]%}%M \
+%{$fg[white]%}in \
+%{$terminfo[bold]$fg[yellow]%}%~%{$reset_color%}\
+${hg_info}\
+${git_info}\
+ \
+%{$fg[white]%}[%*] $exit_code
+%{$terminfo[bold]$fg[red]%}$ %{$reset_color%}"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
